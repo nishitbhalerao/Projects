@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Name - Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(./img2.jpg);
+            background-size: cover;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            float: left;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        section {
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .about, .projects, .contact {
+            margin-bottom: 40px;
+        }
+        .contact form input, .contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        .contact form button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .contact form button:hover {
+            background-color: #555;
+        }
+        .myimg{
+            height: 400px;
+            width: 300px;
+        }
+   
+        .formimg{
+            height: 300px;
+            width: 600px;
+            border-radius: 20px;
+            filter: drop-shadow(10px 10px 10px black);
+            transition: height 2s width 2s;
+
+        }
+        .formimg:hover{
+            height: 320px;
+            width: 620px;
+        }
+       
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>WELCOME TO MY PORTFOLIO</h1>
+</header>
+
+<nav>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about" class="about">
+    <div class="container">
+        <h2>About Me:-</h2>
+        <p><i><b> My name is Nishit Bhalerao.<br> Im a FYBSC student of BLOCKCHAIN. I am passionate about web development, coding, and technology. Im learning new skills daily to improve my web devlopment.</b></i></p>
+        <img src="./nishitpfp.jpg" class="myimg"/>
+    </div>
+</section>
+
+<section id="projects" class="projects">
+    <div class="container">
+        <h2> My Projects:-</h2>
+        <a href="./form.html">
+            <img src="./form_project.PNG" alt="form project" class="formimg" id="form"/>
+        </a>
+        <p style=" margin-left: 10px; margin-top: 30px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 18px;">Form Project</p>
+    </div><br/><br/>
+   
+        <a href="./movie.html">
+            <img src="./movie.jpg" alt="form project" class="formimg" id="movie"/>
+        </a>
+        <p style=" margin-left: 10px; margin-top: 30px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 18px;">Movie Project</p>
+        <br/><br/>
+    
+        <a href="./table.html">
+            <img src="./table_proj.PNG" alt="form project" class="formimg" id="table" />
+        </a>
+        <p style=" margin-left: 10px; margin-top: 30px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 18px;">Table Project</p>
+        <br/><br/>
+   
+</section>
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Contact Information:-</h2>
+        <p><i><b>If you would like to get in touch with me, feel free to reach out through the form below:</b></i></p>
+        <form action="submit2.html">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" placeholder="Type your message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+</body>
+</html>
