@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>Student Attendance Calculator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #a9a7ee;
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+    }
+    .container {
+        background: rgb(243, 231, 231);
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    input, button {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #928e8e;
+        border-radius: 5px;
+    }
+    button {
+        background: #4CAF50;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 15px;
+    }
+    button:hover {
+        background: #45a049;
+    }
+    .result {
+        margin-top: 15px;
+        font-weight: bold;
+        text-align: center;
+        font-size: 18px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Attendance Calculator</h2>
+    
+    <label>Student Name</label>
+    <input type="text" id="name">
+    
+    <label>Month</label>
+    <input type="month" id="month">
+    
+    <label>Total Days</label>
+    <input type="number" id="totalDays">
+    
+    <label>Attended Days</label>
+    <input type="number" id="attendedDays">
+    
+    <button onclick="calculateAttendance()">CALCULATE</button>
+    
+    <div class="result" id="result"></div>
+</div>
+<script>
+function calculateAttendance() {
+    let total = parseFloat(document.getElementById("totalDays").value);
+    let attended = parseFloat(document.getElementById("attendedDays").value);
+    let name = document.getElementById("name").value;
+    let month = document.getElementById("month").value;
+
+    if (!total || !attended || attended > total) {
+        document.getElementById("result").innerHTML = "Invalid input!";
+        return;
+    }
+
+    let percentage = (attended / total) * 100;
+    document.getElementById("result").innerHTML = 
+        name + " (" + month + "): " + percentage.toFixed(2) + "% attendance";
+}
+</script>
+</body>
+</html>
+
